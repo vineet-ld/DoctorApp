@@ -1,0 +1,148 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Matt Murdock",
+      "type": "Primary Care Provider",
+      "speciality": "Pulmonary Disease",
+      "area": "02120",
+      "score": 5.0,
+      "gender": "M"
+    },
+    {
+      "id": 2,
+      "name": "Jessica Jones",
+      "type": "Primary Care Provider",
+      "speciality": "Pediatrics",
+      "area": "02120",
+      "score": 4.8,
+      "gender": "F"
+    },
+    {
+      "id": 3,
+      "name": "Luke Cage",
+      "type": "Primary Care Provider",
+      "speciality": "Internal Medicine",
+      "area": "02121",
+      "score": 4.9,
+      "gender": "M"
+    },
+    {
+      "id": 4,
+      "name": "Danny Rand",
+      "type": "Primary Care Provider",
+      "speciality": "Pulmonary Disease",
+      "area": "02121",
+      "score": 4.5,
+      "gender": "M"
+    },
+    {
+      "id": 5,
+      "name": "Phil Colson",
+      "type": "Specialist",
+      "speciality": "Surgery General",
+      "area": "02122",
+      "score": 5.0,
+      "gender": "M"
+    },
+    {
+      "id": 6,
+      "name": "Daisy Johnson",
+      "type": "Specialist",
+      "speciality": "Internal Medicine",
+      "area": "02120",
+      "score": 4.8,
+      "gender": "F"
+    },
+    {
+      "id": 7,
+      "name": "Melinda May",
+      "type": "Specialist",
+      "speciality": "Surgery General",
+      "area": "02121",
+      "score": 4.9,
+      "gender": "F"
+    },
+    {
+      "id": 8,
+      "name": "Leo Fitz",
+      "type": "Specialist",
+      "speciality": "Internal Medicine",
+      "area": "02121",
+      "score": 4.5,
+      "gender": "M"
+    },
+    {
+      "id": 9,
+      "name": "Don Henry",
+      "type": "Primary Care Provider",
+      "speciality": "Pulmonary Disease",
+      "area": "02120",
+      "score": 5.0,
+      "gender": "M"
+    },
+    {
+      "id": 10,
+      "name": "Vineet Dadnekar",
+      "type": "Primary Care Provider",
+      "speciality": "Pediatrics",
+      "area": "02120",
+      "score": 4.8,
+      "gender": "M"
+    },
+    {
+      "id": 11,
+      "name": "Ishay Grienberg",
+      "type": "Primary Care Provider",
+      "speciality": "Internal Medicine",
+      "area": "02121",
+      "score": 4.9,
+      "gender": "M"
+    },
+    {
+      "id": 12,
+      "name": "Harald Skardal",
+      "type": "Primary Care Provider",
+      "speciality": "Pulmonary Disease",
+      "area": "02121",
+      "score": 4.5,
+      "gender": "M"
+    },
+    {
+      "id": 13,
+      "name": "Carmine Magnalio",
+      "type": "Specialist",
+      "speciality": "Surgery General",
+      "area": "02122",
+      "score": 5.0,
+      "gender": "M"
+    },
+    {
+      "id": 14,
+      "name": "Josephine Koo",
+      "type": "Specialist",
+      "speciality": "Internal Medicine",
+      "area": "02120",
+      "score": 4.8,
+      "gender": "F"
+    },
+    {
+      "id": 15,
+      "name": "Evan Witt",
+      "type": "Specialist",
+      "speciality": "Surgery General",
+      "area": "02121",
+      "score": 4.9,
+      "gender": "M"
+    },
+    {
+      "id": 16,
+      "name": "Gonzalo Molano",
+      "type": "Specialist",
+      "speciality": "Internal Medicine",
+      "area": "02121",
+      "score": 4.5,
+      "gender": "M"
+    }
+  ]
+}

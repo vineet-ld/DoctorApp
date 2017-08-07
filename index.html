@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            footer {
+                margin-top: 30px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        Similar Doctors
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Problem Statement</h1>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>A site contains a listing of doctors. Users can browse for doctors given a specific specialty, area,
+                            review score etc. Write a function which when given a doctor, provides a list of similar doctors,
+                            in a prioritized order. You define what similar means and the result ordering, but clearly
+                            document any assumptions in your code. You can assume the entire directory of doctors fits
+                            into memory, and write in JavaScript. Include unit tests.</p>
+                        <p>Aim to spend a maximum of 45 minutes on this coding challenge. If applicable, note down any
+                            remaining thoughts or things you would want to improve on with more time.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Solution</h1>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>A <code>Doctor</code> object has three methods: </p>
+                        <ul>
+                            <li><code>init()</code></li>
+                            <li><code>getSimilarDoctors()</code></li>
+                            <li><code>list</code></li>
+                        </ul>
+                        <p>You need to create instances of the <code>Doctor</code> object to use the above methods. The <code>Doctor</code> becomes a psuedo-class. You can create n number for doctor instances to get related doctors. Create an instance of <code>Doctor</code> by:</p>
+                        <pre>
+var doc = Object.create(Doctor);
+                        </pre>
+                        <p>Once you create an instance of the <code>Doctor</code>, you can use the following two methods:</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Initializing the doctor instance</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>The <code>init()</code> method is used to initialize the new doctor instance. The method takes an Object as a parameter. This object has key - value pairs of the Doctor's properties like name, type, speciality, etc.</p>
+                        <p>The sample code is as follows: </p>
+                        <pre>
+doc.init({
+    id: 3,
+    name: "Luke Cage",
+    type: "Specialist",
+    speciality: "Pediatrics",
+    area: "02121",
+    score: 4.9,
+    gender: "M"
+});
+                        </pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Getting a list of similar doctors</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>The <code>getSimilarDoctors()</code> method retrieves a list of similar doctors based on the properties of the doctor's instance. The method takes an optional parameter which states the number of similar doctors needed. If the parameter is not passed, the list of 5 doctors is returned by default</p>
+                        <p>The sample code is as follow</p>
+                        <pre>
+var similarDocs = doc.getSimilarDoctors(3);
+                        </pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Get all the doctors</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <p><code>list</code> is a property which retrieves all the doctors from <code>doctors.json</code> with an AJAX call and stores it in the form of an array.
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Assumptions</h1>
+                    </div>
+                    <div class="col-xs-12">
+                        <ol>
+                            <li>The list of doctors are retrived with an AJAX call from a file <code>doctors.json</code>. There are 16 imaginary doctors in the JSON object.</li>
+                            <li>
+                                Each doctor has following seven properties:
+                                <ul>
+                                    <li>ID</li>
+                                    <li>Name</li>
+                                    <li>Type</li>
+                                    <li>Speciality</li>
+                                    <li>Area</li>
+                                    <li>Gender</li>
+                                    <li>Review Score</li>
+                                </ul>
+                            </li>
+                            <li>For retrieving similar list of doctors, a similarity score is given to each doctor object retrieved from the JSON according to its properties. The similarity score is different for each property. For speciality, the similarity score is 4, for type the score is 2 and for area and gender, the score is one. In the end, a cumulative score is calculated and the doctors with the highest similarity score are returned.</li>
+                            <li>If the similarity score is equal for more than one doctor, they are sorted in the descending order of review score</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+        <aside>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Links to the project files:</h2>
+                        <ul>
+                            <li><a href="src/doctors.js" target="_blank">doctors.js</a></li>
+                            <li><a href="doctors.json" target="_blank">doctors.json</a></li>
+                            <li><a href="spec/testDoctors.js" target="_blank">testDoctors.js</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Instructions for running tests</h2>
+                        <ol>
+                            <li>Install node</li>
+                            <li>Open the project folder in the terminal</li>
+                            <li>Enter <code>npm install</code> in the terminal</li>
+                            <li>Then enter <code>npm test</code> to run the tests</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    &copy; Vineet Dandekar 2016
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="src/doctors.js"></script>
+
+    <script>
+        /* Example for retrieving the similar doctor list */
+
+        $(document).ready(function() {
+            var doc = Object.create(Doctor);
+            doc.init({
+                id: 3,
+                name: "Luke Cage",
+                type: "Specialist",
+                speciality: "Pediatrics",
+                area: "02121",
+                score: 4.9,
+                gender: "M"
+            });
+
+            console.info(doc.getSimilarDoctors(10));
+        });
+
+    </script>
+
+    </body>
+</html>

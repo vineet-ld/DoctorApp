@@ -1,0 +1,16 @@
+{
+  "name": "doctorsapp",
+  "version": "1.0.0",
+  "description": "Library which return list of similar doctors",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Vineet Dandekar",
+  "license": "Practise Fusion",
+  "devDependencies": {
+    "jasmine": "^2.7.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
